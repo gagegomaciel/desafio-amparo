@@ -1,0 +1,149 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aramo Telefonia</title>
+    <link rel="stylesheet" href="./styles//styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+      <header class="flex-header">
+        <div class="grid">
+            <img src="./assets/logo.png" alt="" class="logo">
+        </div>
+        <div class="search-nav">
+            <input type="text" class="search" placeholder="Buscar...">
+            <button class="btn-search"><i class="fas fa-search"></i></button>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+      </header>
+    </div>    
+      <div class="conteudo">
+          <div class="texto-content1">
+              <p>
+                A empresa de telefonia Aramo, especializada em chamadas de longa distância
+                nacional, lançou um novo produto chamado FaleMais. Com esse novo plano 0
+                cliente Aramo pode fazer uma chamada de uma cidade para outra pagando uma tarifa fixa
+                por minuto, com os preços sendo pré-definido em uma lista com os códigos DDD abaixo
+              </p><br>
+              <p>
+                Com o produto FaleMais, o cliente adquire um plano e pode falar de graça até um
+                determinado tempo (em minutos) e só paga os minutos excedentes. Os minutos
+                excedentes tem um acréscimo de 10% sobre a tarifa normal do minuto.
+            </p>
+          </div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Origem</th>
+                <th scope="col">Destino</th>
+                <th scope="col">R$ Tarifa minuto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>11</td>
+                <td>16</td>
+                <td>R$ 1,90</td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>11</td>
+                <td>R$ 2,90</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>17</td>
+                <td>R$ 1,70</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>11</td>
+                <td>R$ 2,70</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>18 </td>
+                <td>R$ 0,90</td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td>11</td>
+                <td>R$ 1,90</td>
+              </tr>
+            </tbody>
+          </table><br><br>
+          <div class="planos">
+            <h1 class="title-planos">Novos Planos</h1>
+            <ul class="faleMais">
+                <li><strong>FaleMais 30</strong></li>
+                <li><strong>FaleMais 60</strong></li>
+                <li><strong>FaleMais 120</strong></li>
+            </ul>
+          </div>
+          <div class="texto-content1">
+            <p>
+              A Aramo, preocupada com a transparência junto aos seus clientes, está
+              disponibilizando esta ferramenta para que o cliente possa calcular o valor da ligação. O cliente pode escolher os códigos das cidades de origem e destino, o tempo da ligação em
+              minutos e escolher qual o plano FaleMais. O sistema irá calcular o total da ligação. 
+            </p><br>
+          </div>
+          <section class="content">
+              <table class="table-calc">
+                  <thead>
+                    <tr>
+                      <th scope="col">Origem</th>
+                      <th scope="col">Destino</th>
+                      <th scope="col">Tempo</th>
+                      <th scope="col">Plano</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th><input type="text"  id="origem" placeholder="00"></th>
+                      <th><input type="text"  id="destino" placeholder="00"></th>
+                      <th><input type="text"  id="minutos" placeholder="000"></th>
+                      <th>
+                        <select class="select" id="planos">
+                          <option value="0" selected>Escolha seu Plano</option>
+                        </select>
+                      </th>
+                      <th><button type="button" onclick="calcular()" class="btnCalc">Calcular</button></th>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="title-total">
+                    <h4>Total</h4>
+                </div>
+                <table class="table-total">
+                  <thead>
+                    <tr>
+                      <th scope="col">Total com o Plano</th>
+                      <th scope="col">Total sem o Plano</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td id="valorPlano">R$ 0,00</td>
+                      <td id="valorSemPlano">R$ 0,00</td>
+                    </tr>
+                  </tbody>
+                </table>
+          </section>
+          <footer class="footer">
+              <div>
+                  <p>© Copyright 2020 Aramo Telefonia</p>
+              </div>
+          </footer>
+      </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
